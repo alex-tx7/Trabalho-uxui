@@ -1,0 +1,247 @@
+/* Layout Básico */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #F4F4F4; 
+}
+
+/* Cabeçalho */
+header {
+    background: #2C3E50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1ABC9C;
+}
+
+/* Introdução */
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.intro-image {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seções */
+section {
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+section h2 {
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer div {
+    margin-top: 10px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Alinha os itens em linha */
+    justify-content: space-around; /* Espaçamento uniforme entre os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+footer ul li {
+    margin-bottom: 15px;
+    flex: 1; /* Permite que os itens ocupem espaço igual */
+    max-width: 300px; /* Define uma largura máxima para os itens */
+    text-align: left; /* Alinha o texto à esquerda dentro do item */
+}
+
+footer ul li a {
+    color: #1ABC9C;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilização do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1ABC9C; 
+    outline: none;
+}
+
+form button {
+    padding: 10px;
+    background-color: #1ABC9C; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #16A085; 
+}
+
+/* Responsividade */
+
+@media (max-width: 414px) {
+    .intro-container {
+        flex-direction: column; /* Muda a direção do flex para coluna em telas menores */
+        align-items: center;
+        padding: 10px; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+    }
+
+    .intro-image {
+        width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-top: 20px; /* Espaçamento acima da imagem em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda a direção da lista de navegação em telas menores */
+        gap: 10px;
+        padding: 0; /* Remove o padding padrão da lista */
+        list-style: none; /* Remove os marcadores da lista */
+    }
+
+    nav ul li {
+        width: 100%; /* Faz com que cada item da lista ocupe toda a largura */
+        text-align: center; /* Centraliza o texto dos itens da lista */
+    }
+
+    section {
+        margin: 20px; /* Reduz a margem das seções em telas menores */
+        padding: 10px; /* Adiciona padding para espaçamento interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destaque */
+        border-radius: 8px; /* Arredonda os cantos das seções */
+    }
+
+    /* Rodapé */
+    footer ul {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    footer ul li {
+        flex: unset; /* Remove o flex dos itens */
+        max-width: none; /* Remove a largura máxima */
+        text-align: center; /* Centraliza o texto dos itens */
+    }
+
+    /* Estilização adicional para botões */
+    button {
+        width: 100%; /* Faz os botões ocuparem toda a largura */
+        padding: 10px; /* Aumenta o padding para melhor usabilidade em toques */
+        font-size: 16px; /* Aumenta o tamanho da fonte para facilitar a leitura */
+    }
+
+    /* Ajustes de texto */
+    h1, h2, h3 {
+        font-size: 1.5em; /* Aumenta o tamanho da fonte dos títulos */
+        text-align: center; /* Centraliza os títulos */
+    }
+
+    p {
+        font-size: 1em; /* Ajusta o tamanho da fonte do texto */
+        line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+    }
+}
